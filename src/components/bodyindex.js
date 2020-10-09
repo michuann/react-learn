@@ -1,6 +1,10 @@
 import React from "react";
-
+import PropTypes from 'prop-types';
 import BodyChild from "./bodychild";
+
+const defaultProps = {
+    username: '这是一个默认的用户名'
+}
 
 export default class BodyIndex extends React.Component{
     // 构造函数
@@ -25,18 +29,23 @@ export default class BodyIndex extends React.Component{
         //     //更改 state 的时候
         //     this.setState({username : "IMOOC", age : 30});
         // },4000);
-
         //component
         return (
             <div>
                 <h2>页面的主体内容</h2>
-                <p>{this.props.userid} {this.props.username}</p>
+                <p>接收父页面的属性：userid: {this.props.userid} username: {this.props.username}</p>
                 <p>age: {this.state.age}</p>
                 <input type='button' value='提交' onClick={this.changeUserInfo.bind(this, 99)}/>
-                <BodyChild handleChildValueChange={this.handleChildValueChange.bind(this)}/>
+                <BodyChild {...this.props} id={4} handleChildValueChange={this.handleChildValueChange.bind(this)}/>
             </div>
-        );
+        )
     }
 }
 
+
+
+BodyIndex.propTypes = {
+    userid: PropTypes.number.isRequired //必须的参数，且必须为数字
+};
+BodyIndex.defaultProps = defaultProps
 
