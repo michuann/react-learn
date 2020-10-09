@@ -7,9 +7,9 @@ import BodyIndex from "./components/indexbody";
 
 class Index extends React.Component{
     render() {
-        var isLogin = 0;
+        var isLogin = 1;
         var component;
-        if (isLogin == 1) {
+        if (isLogin == 0) {
             component = <ComponentHeader/>
         }
         else {
