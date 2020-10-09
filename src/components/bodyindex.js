@@ -1,6 +1,16 @@
 import React from "react";
 
 export default class BodyIndex extends React.Component{
+
+    componentWillMount() {
+        //定义你的逻辑即可
+        console.log("BodyIndex - componentWillMount");
+    }
+
+    componentDidMount() {
+        console.log("BodyIndex - componentDidMount");
+    }
+
     render() {
         var userName = 'Parry';
         var boolInput = false;

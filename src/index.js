@@ -3,9 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import ComponentHeader from "./components/header";
 import ComponentFooter from "./components/footer";
-import BodyIndex from "./components/indexbody";
+import BodyIndex from "./components/bodyindex";
 
 class Index extends React.Component{
+
+    componentWillMount() {
+        //定义你的逻辑即可
+        console.log("Index - componentWillMount");
+    }
+
+    componentDidMount() {
+        console.log("Index - componentDidMount");
+    }
+
     render() {
         var isLogin = 1;
         var component;
