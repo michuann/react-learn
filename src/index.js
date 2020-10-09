@@ -23,7 +23,7 @@ class Index extends React.Component{
             component = <ComponentHeader/>
         }
         else {
-            component = <BodyIndex/>
+            component = <BodyIndex userid={123456} username={'nick'}/>
         }
         return (
             <div>
