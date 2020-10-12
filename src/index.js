@@ -27,6 +27,7 @@ class Index extends React.Component{
         }
         return (
             <div>
+                <ComponentHeader/>
                 {component}
                 <ComponentFooter/>
             </div>
