@@ -4,6 +4,7 @@ import './index.css';
 import ComponentHeader from "./components/header";
 import ComponentFooter from "./components/footer";
 import BodyIndex from "./components/bodyindex";
+import 'antd/dist/antd.css';
 
 class Index extends React.Component{
 
